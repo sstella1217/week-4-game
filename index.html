@@ -2,7 +2,8 @@
 <html>
 <head>
 	<title>Crystal Collector</title>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">></script>
+	
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
@@ -28,7 +29,7 @@
 			<p>Each time when the game starts, the game will change the values of each crystal</p>
 		</div>	
 
-		<div class="scorebox">
+		<div class="scorebox1">
 			<p id="compNumElement"></p>
 		</div>	
 
@@ -37,10 +38,42 @@
 			<h4>Wins:</h4>
 			<br>
 			<h4>Loses:</h4>
+		</div>
+
+		<div class="crystalbox">
+			<button id="but1">
+				<img src="assets/images/diamond-icon.png" alt= "A Diamond Icon">
+			</button>
+		</div>
+
+		<div class="crystalbox">
+			<button id="but2">
+				<img src="assets/images/sapphire-icon.png" alt="A Sapphire Icon">
+			</button>	
+		</div>
+
+		<div class="crystalbox">
+			<button id="but3">
+				<img src="assets/images/swarovski-crystal-icon.png" alt="A Swarovski Crystal Icon">
+			</button>
+		</div>
+
+		<div class="crystalbox">
+			<button id="but4"> 
+				<img src="assets/images/Garnet-icon.png" alt="A Garnet Icon">
+			</button>
+		</div>	
+
+		<div id="textbox">
+			<p>Your total score is:</p>
+		</div>
+		<div class="scorebox2">
+
 		</div>	
 
 	</div>
 
 </body>
+
 <script src="assets/javascript/game.js"></script>
 </html>

@@ -35,13 +35,13 @@
 	
 }
 
-.scorebox{
+.scorebox1{
 	width: 200px;
 	height: 100px;
 	color: black;
 	background-color: lightgreen;
 	margin-left: 20px;
-	margin-top: 20px;
+	margin-top: 10px;
 	float: left;
 }
 
@@ -55,11 +55,46 @@ p{
 	width: 70px;
 	height: 100px;
 	font-size: 12px;
-	margin-top: 20px;
-	background-color: lightblue;
+	margin-top: 10px;
+	background-color: tan;
 	margin-left: 230px;
 }
 
 h4{
 	margin-top: 10px;
 }
+
+.crystalbox{
+	width: 50px;
+	height: 50px;
+	margin-top: 10px;
+	margin-left: 20px;
+	float: left;
+	background-color: white;
+	margin-bottom: 10px;
+}
+
+#textbox{
+	line-height: 20px;
+	width: 200px;
+	background-color: green;
+	clear: left;
+	margin-left: 20px;
+	margin-top: 20px;
+	color: white;
+	font-size: 12px
+}
+
+.scorebox2{
+	width: 200px;
+	height: 100px;
+	color: black;
+	background-color: green;
+	margin-left: 20px;
+	margin-top: 10px;
+	float: left;
+	color: white;
+}
+
+
+

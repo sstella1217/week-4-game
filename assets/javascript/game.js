@@ -1,12 +1,7 @@
 var wins = 0;
 var losses = 0;
-
-
-				
-
-
 	
- //document.getElementById("compNumElement").innerHTML += compNum;
+//Generates a Computer Number between 19 - 120
 
  $(document).ready( function() {
 
@@ -15,12 +10,33 @@ var losses = 0;
 	document.getElementById("compNumElement").innerHTML=compNum;
 
 
- 	$("crystle").click(function(){
- 		var crystleNum = Math.floor(Math.random()* (12 - 1) + 1);
 
- 		console.log(crystleNum);
+ 	$("#but1").click(function(){
+ 		var crystleNum1 = Math.floor(Math.random()* (12 - 1))+ 1;
+ 		console.log(crystleNum1);
 
+ 	});	
+
+ 	$("#but2").click(function(){
+ 		var crystleNum2 = Math.floor(Math.random()* (12 - 1))+ 1;
+ 		console.log(crystleNum2);
+ 		
+
+ 	});	
  	
- 	})
+ 	$("#but3").click(function(){
+ 		var crystleNum3 = Math.floor(Math.random()* (12 - 1))+ 1;
+ 		console.log(crystleNum3);
+
+ 	});	
+
+ 		
+ 	$("#but4").click(function(){
+ 		var crystleNum4 = Math.floor(Math.random()* (12 - 1))+ 1;
+ 		console.log(crystleNum4);
+
+ 	});	
+ 	
+ 	
 
  });	
