@@ -18,7 +18,7 @@ var compNum;
 
 	document.getElementById("compNumElement").innerHTML=compNum;
 	
-
+//Generates a Number between 1 - 12 for crystal 1
  		$("#but1").click(function(){
  			
 			if (crystleNum1===0){
@@ -35,34 +35,13 @@ var compNum;
  			
 
  				if (totalScore === compNum) {
-					wins++
-					end="You Win!";
-					document.getElementById("endElement").innerHTML="You Win!";
-					document.getElementById("winsElement").innerHTML="Wins: "+wins;
-					//document.getElementById("endElement").interHTML=end;
-					//document.getElementById("winsElement").interHTML=wins;
-					console.log(wins);
-					console.log(end);
-					totalScore=0;
-					crystleNum1=0;
-					compNum = Math.floor(Math.random() * (120 - 19)) + 19;
-					document.getElementById("compNumElement").innerHTML=compNum;
+					winning();
+
 				};
 
 				if (totalScore > compNum){
-					losses++
-					end="You Loss!";
-					document.getElementById("endElement").innerHTML="You Loss!";
-					document.getElementById("lossesElement").innerHTML="Losses "+losses;
-					//document.getElementById("endElement").interHTML=end;
-					//document.getElementById("lossesElement").interHTML=losses;
-					console.log(losses);
-					console.log(end);
-					totalScore=0;
-					crystleNum1=0;
-					compNum = Math.floor(Math.random() * (120 - 19)) + 19;
-					document.getElementById("compNumElement").innerHTML=compNum;
-
+					lossing();
+					
 				};
 			}; 	
 
@@ -71,7 +50,7 @@ var compNum;
  		});		
 
  		
-
+//Generates a Number between 1 - 12 for crystal 2
  		$("#but2").click(function(){
  			if (crystleNum2===0){
  				crystleNum2 = Math.floor(Math.random()* (12 - 1))+ 1;
@@ -82,13 +61,24 @@ var compNum;
  
  			else {
 
- 					totalScore = crystleNum2 + totalScore
+ 					totalScore = crystleNum2 + totalScore;
+
+ 				if (totalScore === compNum) {
+					winning();
+
+				};
+
+				if (totalScore > compNum){
+					lossing();
+					
+				};	
+
  					
  			}; 
  			document.getElementById("totalScoreElement").innerHTML=totalScore;
  		});		
  		
- 	
+ //Generates a Number between 1 - 12 for crystal 3	
  		$("#but3").click(function(){
  			if (crystleNum3===0){
  				crystleNum3 = Math.floor(Math.random()* (12 - 1))+ 1;
@@ -100,12 +90,21 @@ var compNum;
  			else {
 
  					totalScore = crystleNum3 + totalScore
- 					
+ 				
+ 				if (totalScore === compNum) {
+					winning();
+
+				};
+
+				if (totalScore > compNum){
+					lossing();
+					
+				};	
  			};
  			document.getElementById("totalScoreElement").innerHTML=totalScore; 
  		});		
 
- 		
+ //Generates a Number between 1 - 12 for crystal 4		
  		$("#but4").click(function(){
  			if (crystleNum4===0){
  				crystleNum4 = Math.floor(Math.random()* (12 - 1))+ 1;
@@ -117,29 +116,55 @@ var compNum;
  			else {
 
  					totalScore = crystleNum4 + totalScore
- 					
+ 				
+ 				if (totalScore === compNum) {
+					winning();
+
+				};
+
+				if (totalScore > compNum){
+					lossing();
+					
+				};	
  			};
  			document.getElementById("totalScoreElement").innerHTML=totalScore; 
- 			
- 		
+ 					 						
+	});				
 
+//Function for winning a game
+    function winning(){
+ 		wins++
+		end="You Win!";
+		document.getElementById("endElement").innerHTML="You Win!";
+		document.getElementById("winsElement").innerHTML="Wins: "+wins;				
+		console.log(wins);
+		console.log(end);
+		totalScore=0;
+		crystleNum1=0;
+		crystleNum2=0;
+		crystleNum3=0;
+		crystleNum4=0;
+		compNum = Math.floor(Math.random() * (120 - 19)) + 19;
+		document.getElementById("compNumElement").innerHTML=compNum;
+	};
 
-		/*if (totalScore === compNum) {
-			wins++
-			end="You Win!"
-			document.getElementById("endElement").interHTML=end;
-			document.getElementById("winsElement").interHTML=wins;
-		};
-
-		if (totalScore > compNum){
-			losses++
-			end="You Loss!"
-			document.getElementById("endElement").interHTML=end;
-			document.getElementById("lossesElement").interHTML=losses;
-		};*/
-
-	});	
-
+//Function for lossing a game
+	function lossing(){
+		losses++
+		end="You Loss!";
+		document.getElementById("endElement").innerHTML="You Loss!";
+		document.getElementById("lossesElement").innerHTML="Losses "+losses;
+		console.log(losses);
+		console.log(end);
+		totalScore=0;
+		crystleNum1=0;
+		crystleNum2=0;
+		crystleNum3=0;
+		crystleNum4=0;
+		compNum = Math.floor(Math.random() * (120 - 19)) + 19;
+		document.getElementById("compNumElement").innerHTML=compNum;
+	
+	};	
 });		
 
  
